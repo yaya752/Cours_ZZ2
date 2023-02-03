@@ -4,8 +4,15 @@
 #include <iostream>
 #include <fstream>
 
-class Chaine  {
-
+class Chaine {
+    int capacite;
+    char* tab[];
+    public:
+        Chaine();
+    public:
+        char* c_str() const;
+        int getCapacite() const;
+        
 };
 
 #endif
