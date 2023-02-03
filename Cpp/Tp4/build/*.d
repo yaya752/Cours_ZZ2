@@ -1,0 +1,1 @@
+build/*.o: gprof.cpp
