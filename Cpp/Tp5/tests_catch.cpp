@@ -1,6 +1,6 @@
 #include "catch.hpp"
 #include <cstring>
-#include <sstream> // a mettre en commentaire 
+//#include <sstream> // a mettre en commentaire 
 #include "Chaine.hpp"
 
 TEST_CASE("Constructeur par defaut") {
@@ -9,14 +9,14 @@ TEST_CASE("Constructeur par defaut") {
    CHECK(  0 == c.c_str()); // 0, NULL, ou nullptr
 }
 
-/*
+
 TEST_CASE("Verification des const sur les accesseurs") {
    const Chaine c;
    CHECK( -1 == c.getCapacite());
    CHECK(  0 == c.c_str()); // 0, NULL, ou nullptr
-} */
+} 
 
-/*
+
 TEST_CASE("Constructeur par chaine C") {
 	char  source []= "rien";
     Chaine c1(source);
@@ -28,7 +28,7 @@ TEST_CASE("Constructeur par chaine C") {
     CHECK( 0 == strcmp("", c2.c_str())); 
 
     // Verifier que la liberation memoire est bien faite
-} */
+}
 
 /*
 TEST_CASE("Constructeur avec capacite") {
