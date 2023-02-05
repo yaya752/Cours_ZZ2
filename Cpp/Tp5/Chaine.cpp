@@ -12,7 +12,7 @@ Chaine::Chaine(const char* inCS):capacite{(signed) strlen(inCS) }
 }
 Chaine::Chaine(const Chaine& c1):capacite{c1.capacite}
 {
-    tab = new char[capacite+1];
+    tab = new char[c1.capacite+1];
     strcpy(tab, c1.tab);
     std::cout << "Constructeur de copie de Chaine.\n";
 }
@@ -22,6 +22,7 @@ Chaine::Chaine(int capa):capacite{capa},tab{new char[capa+1]}
 }
 Chaine::~Chaine()
 {
+
     delete [] tab;
 }
 char* Chaine::c_str() const
@@ -43,7 +44,8 @@ void Chaine::afficher(std::ostream &fr) const
 }
 Chaine& Chaine::operator=(const Chaine& x)
 {
-    tab = new char[x.capacite+2];
+    delete [] tab ;
+    tab = new char[x.capacite+1];
     strcpy(tab, x.tab);
     capacite = x.capacite;
     return *this;

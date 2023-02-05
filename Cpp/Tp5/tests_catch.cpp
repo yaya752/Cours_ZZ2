@@ -2,7 +2,6 @@
 #include <cstring>
 #include <sstream> // a mettre en commentaire 
 #include "Chaine.hpp"
-
 TEST_CASE("Constructeur par defaut") {
    Chaine c;
    CHECK( -1 == c.getCapacite());
@@ -79,6 +78,9 @@ TEST_CASE("operateur d'affectation") {
     //s1 = s1; // est ce que cela va survivre a l execution ?
 }
 
+std::ostream& operator<<( std::ostream & fr,const Chaine  x){
+    return fr << x.tab;
+}
 TEST_CASE("Surcharge <<") {
 	const char * chaine = "une nouvelle surcharge";
 	Chaine s(chaine);
