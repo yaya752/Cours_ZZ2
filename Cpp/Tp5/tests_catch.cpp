@@ -81,6 +81,7 @@ TEST_CASE("operateur d'affectation") {
 std::ostream& operator<<( std::ostream & fr,const Chaine  x){
     return fr << x.tab;
 }
+
 TEST_CASE("Surcharge <<") {
 	const char * chaine = "une nouvelle surcharge";
 	Chaine s(chaine);

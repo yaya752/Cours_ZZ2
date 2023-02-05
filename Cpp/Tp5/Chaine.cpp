@@ -50,3 +50,11 @@ Chaine& Chaine::operator=(const Chaine& x)
     capacite = x.capacite;
     return *this;
 }
+/*
+Chaine& Chaine::operator[](const int indice)
+{
+    char
+    std::cin  >> prenom;
+    return *this;
+}
+*/
