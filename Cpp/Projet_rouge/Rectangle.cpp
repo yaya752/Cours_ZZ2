@@ -6,21 +6,11 @@
 Rectangle::Rectangle(int vx, int vy, int vw, int vh):Forme{Point{vx,vy},vw,vh}
 {
 }
-Rectangle::Rectangle():Forme{}
-{}
-
-void Rectangle::SetOrdre(int a)
-{
-  ordre = a;
-}
-int Rectangle::GetOrdre()
-{
-  return ordre; 
-}
+Rectangle::Rectangle():Forme{} {}
 std::string Rectangle::toString()
 {
   std::ostringstream oss;
-  oss << "RECTANGLE: " << Forme::toString();
+  oss << "RECTANGLE:" << Forme::toString();
   return oss.str();
 }
 Rectangle::~Rectangle()

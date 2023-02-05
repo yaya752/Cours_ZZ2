@@ -3,7 +3,11 @@
 #include <sstream>
 #include "Groupe.hpp"
 
-class GROUPE{
-
-    
-};
+Groupe::Groupe(){}
+Groupe::~Groupe(){}
+std::string Groupe::toString()
+{
+    std::ostringstream oss;
+    oss << "GROUPE:"<< Forme::toString();
+    return oss.str();
+}

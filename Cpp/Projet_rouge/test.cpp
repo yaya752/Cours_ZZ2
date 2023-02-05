@@ -3,6 +3,7 @@
 #include "Forme.hpp"
 #include "Cercle.hpp"
 #include "Rectangle.hpp"
+#include "Groupe.hpp"
 
 TEST_CASE("Instanciation", "[Point]") {
   Point p1;
@@ -26,16 +27,16 @@ TEST_CASE("Origine", "[Point]") {
   REQUIRE(ORIGINE.getY() == 0);
 }
 TEST_CASE("Compteur", "[Forme]") {
-   // Pour être correct, ce test doit etre le premier sur Forme
-   REQUIRE(0 == Forme::prochainId());
-   Forme f1;
-   REQUIRE(0 == f1.getId());
-   REQUIRE(1 ==  Forme::prochainId());  
-   // Verification que la valeur n'est pas decrementee accidentellement.
-   Forme *p = new Forme;
-   REQUIRE(1 == p->getId());
-   delete p;
-   REQUIRE(2 == Forme::prochainId()); 
+  // Pour être correct, ce test doit etre le premier sur Forme
+  REQUIRE(0 == Forme::prochainId());
+  Forme f1;
+  REQUIRE(0 == f1.getId());
+  REQUIRE(1 ==  Forme::prochainId());  
+  // Verification que la valeur n'est pas decrementee accidentellement.
+  Forme *p = new Forme;
+  REQUIRE(1 == p->getId());
+  delete p;
+  REQUIRE(2 == Forme::prochainId()); 
 }
 TEST_CASE("Instanciation1", "[Forme]") {
   Forme f1;
@@ -78,28 +79,37 @@ TEST_CASE("Instanciation3", "[Forme]") {
 
 
 TEST_CASE("Cercle", "[Cercle]") {
-   int compteur = Forme::prochainId();
-   Cercle c1;
-   Cercle c2{1,2,3,4}; 
-   
-   REQUIRE(c1.toString() == "CERCLE: 0 0 0 0");
-   REQUIRE(c2.toString() == "CERCLE: 1 2 3 4");
+  int compteur = Forme::prochainId();
+  Cercle c1;
+  Cercle c2{1,2,3,4}; 
+  
+  REQUIRE(c1.toString() == "CERCLE:5 0 0 0 0");
+  REQUIRE(c2.toString() == "CERCLE:6 1 2 3 4");
 
-   c2.setRayon(5);
-   REQUIRE(c2.getRayon()   == 5  );
-   REQUIRE(c2.toString()   == "CERCLE: 1 2 10 10");
-   REQUIRE(c2.getLargeur() == 10);
-   REQUIRE(c2.getHauteur() == 10);  
+  c2.setRayon(5);
+  REQUIRE(c2.getRayon()   == 5  );
+  REQUIRE(c2.toString()   == "CERCLE:6 1 2 10 10");
+  REQUIRE(c2.getLargeur() == 10);
+  REQUIRE(c2.getHauteur() == 10);  
 
-   REQUIRE(Forme::prochainId() == (compteur+2) ); 
+  REQUIRE(Forme::prochainId() == (compteur+2) ); 
 }
 TEST_CASE("Polymorphisme", "[Forme]") {
-   Forme * f1 = new Cercle;
-   Forme * f2 = new Rectangle;
+  Forme * f1 = new Cercle;
+  Forme * f2 = new Rectangle;
 
-   REQUIRE(f1->toString() == "CERCLE: 0 0 0 0");
-   REQUIRE(f2->toString() == "RECTANGLE: 0 0 0 0");
+  REQUIRE(f1->toString() == "CERCLE:7 0 0 0 0");
+  REQUIRE(f2->toString() == "RECTANGLE:8 0 0 0 0");
 
-   delete f1;
-   delete f2;
+  delete f1;
+  delete f2;
+}
+TEST_CASE("Strucutre liste", "[Groupe]") {
+    Cercle c = Cercle{10,10,30,30};
+    Rectangle r = Rectangle{10,10,40,40};
+    Groupe g = Groupe{};
+    REQUIRE(c.toString() == "CERCLE:9 10 10 30 30");
+    REQUIRE(r.toString() == "RECTANGLE:10 10 10 40 40");
+    REQUIRE(g.toString() == "GROUPE:11 0 0 0 0");
+
 }

@@ -2,7 +2,6 @@
 #define _Cercle
 #include "Forme.hpp"
 class Cercle : public Forme{
-    int ordre;
     public:
         void SetOrdre(int a);
         int GetOrdre();

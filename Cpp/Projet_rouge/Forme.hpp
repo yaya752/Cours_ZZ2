@@ -10,8 +10,9 @@ class Forme{
         int w;
         int h;
         Point p ;
+        int Id;
         static int compteur;
-        static int Id;
+        
         COULEURS couleur = COULEURS::BLEU;
     public:
         void setId();
