@@ -15,6 +15,7 @@ class Chaine {
         Chaine(int capa);
         Chaine( const Chaine& );           // Declare copy constructor.
         Chaine& operator=(const Chaine& x);
+        //std::ostream& operator<<(std::ostream &fr);
         ~Chaine();
         
     public:
@@ -25,4 +26,7 @@ class Chaine {
         
 };
 
+std::ostream& operator<<(const std::ostream &fr, Chaine x){
+    return fr << x.tab;
+}
 #endif

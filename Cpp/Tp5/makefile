@@ -17,5 +17,5 @@ build/%.o: %.cpp
 
 clean:
 	rm -rf build core *.gch
-
+	rm -rf *.o
 -include $(DEP)

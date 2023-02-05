@@ -43,7 +43,7 @@ void Chaine::afficher(std::ostream &fr) const
 }
 Chaine& Chaine::operator=(const Chaine& x)
 {
-    tab = new char[x.capacite+1];
+    tab = new char[x.capacite+2];
     strcpy(tab, x.tab);
     capacite = x.capacite;
     return *this;
