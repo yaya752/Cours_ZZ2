@@ -105,11 +105,15 @@ TEST_CASE("Polymorphisme", "[Forme]") {
   delete f2;
 }
 TEST_CASE("Strucutre liste", "[Groupe]") {
-    Cercle c = Cercle{10,10,30,30};
+    Rectangle c = Rectangle{10,10,30,30};
     Rectangle r = Rectangle{10,10,40,40};
     Groupe g = Groupe{};
-    REQUIRE(c.toString() == "CERCLE:9 10 10 30 30");
-    REQUIRE(r.toString() == "RECTANGLE:10 10 10 40 40");
-    REQUIRE(g.toString() == "GROUPE:11 0 0 0 0");
+    g.ajoutForme(&c);
+    g.ajoutForme(&r);
+    
+  
 
+    REQUIRE(c.toString() == "RECTANGLE:9 10 10 30 30");
+    REQUIRE(r.toString() == "RECTANGLE:10 10 10 40 40");
+    REQUIRE(g.toString() == "GROUPE:11 10 10 40 40\nRECTANGLE:9 10 10 30 30\nRECTANGLE:10 10 10 40 40\n");
 }

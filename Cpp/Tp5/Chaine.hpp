@@ -26,4 +26,5 @@ class Chaine {
         void afficher() const;
         
 };
+std::ostream& operator<<( std::ostream & fr,const Chaine  x);
 #endif
