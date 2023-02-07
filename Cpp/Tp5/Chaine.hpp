@@ -16,7 +16,7 @@ class Chaine {
         Chaine( const Chaine& );           // Declare copy constructor.
         Chaine& operator=(const Chaine& x);
         //Chaine& operator[](const int indice);
-=
+
         ~Chaine();
         
     public:
