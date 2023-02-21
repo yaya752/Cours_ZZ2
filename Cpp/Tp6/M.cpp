@@ -30,8 +30,9 @@ class F : public M {
         F(const F& f) {
             std::cout << "F::F(const F&)" << std::endl;
         }
-        F& M::operator=(const F& x)
+        F& operator=(const F& x)
         {
+            M::operator=(x);
             std::cout << "operator=F" << std::endl;
             return *this;
         }
