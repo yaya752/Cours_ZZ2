@@ -50,7 +50,7 @@ Chaine& Chaine::operator=(const Chaine& x)
     capacite = x.capacite;
     return *this;
 }
-std::ostream& operator<<( std::ostream & fr,const Chaine  x){
+std::ostream& operator<<( std::ostream & fr,const Chaine x){
     return fr << x.tab;
 }
 /*
