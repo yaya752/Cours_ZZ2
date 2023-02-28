@@ -1,8 +1,9 @@
 #include "catch.hpp"
 #include <cstring>
 #include <sstream> // a mettre en commentaire 
-#include "Pile.hpp"
+#include "PileGen.hpp"
 
+using  Pile = PileGen<int>;
 
 TEST_CASE("Constructeur par defaut") {
    Pile p; 

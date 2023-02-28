@@ -1,16 +1,14 @@
 #include "Pile.hpp"
 int Pile::empty() const
 {
-    return vide;
+    return cursor==0;
 }
 int Pile::size()const
 {
     return cursor;
 }
-Pile::Pile():vide{1},taille{0},pile{nullptr}
-{  
-}
-Pile::Pile(int a):vide{1},taille{a}
+
+Pile::Pile(int a):taille{a}
 { 
     if (a<=0)
     {
@@ -24,10 +22,6 @@ void Pile::pop()
     if(cursor > 0)
     {
         cursor--;
-        if (cursor == 0)
-        {
-            vide = 1;
-        }
     }
     else
     {
@@ -54,7 +48,6 @@ void Pile::push(int x)
     {
         pile[cursor] = x;
         cursor++;
-        vide = 0;
     }
     else
     {

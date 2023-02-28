@@ -1,6 +1,6 @@
-SRC=Pile.cpp tests_catch.cpp main_test.cpp
+SRC=tests_catch.cpp main_test.cpp
 #SRC=$(wildcard *.cpp)  
-EXE=cpp6bis
+EXE=cpp7
 
 CXXFLAGS+=-MMD -g -O2 -Wall -Wextra 
 LDFLAGS= 
