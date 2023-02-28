@@ -1,0 +1,26 @@
+
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns1.secu.sys. hostmaster.secu.sys. (
+                        	 2023         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns1.secu.sys. ;serveur primaire
+NS1     IN      A       192.168.20.157
+@       IN      NS      ns2.secu.sys. ;serveur secondaire
+NS2     IN      A       192.168.20.160
+;Liste de clients
+client  IN      A       192.168.20.159
+
+;serveur mail
+mail    IN      A       192.168.20.158
+@       IN      MX 20   mail.secu.sys.
+
+pop     IN      CNAME   mail
+imap    IN      CNAME   mail
+smtp    IN      CNAME   mail

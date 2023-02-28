@@ -1,0 +1,17 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns1.secu.sys. hostmaster.secu.sys. (
+                             44         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns1.secu.sys.
+157     IN      PTR     ns1.secu.sys.
+158     IN      PTR     mail.secu.sys.
+159     IN      PTR     client.secu.sys.
+@       IN      NS      ns2.secu.sys.
+160     IN      PTR     ns2.secu.sys.

@@ -82,6 +82,6 @@ TEST_CASE("Surcharge <<") {
 	Chaine s(chaine);
     std::stringstream ss;
     ss<<s;
-
+    
     CHECK( ss.str() == chaine ); //  test de std::string, again :-))
 }

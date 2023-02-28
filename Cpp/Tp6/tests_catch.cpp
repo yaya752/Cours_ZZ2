@@ -2,6 +2,14 @@
 #include <cstring>
 #include <sstream> // a mettre en commentaire 
 #include "Pile.hpp"
+
+
+TEST_CASE("Constructeur par defaut") {
+   Pile p; 
+   
+   CHECK(  p.empty() );
+   CHECK(  0 == p.size() );
+}
 TEST_CASE("Constructeur par defaut") {
    Pile p; // cela implique que par defaut la capacite de la pile n'est pas nulle => pas d exception
    
