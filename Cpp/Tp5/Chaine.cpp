@@ -61,3 +61,19 @@ Chaine& Chaine::operator[](const int indice)
     return *this;
 }
 */
+char Chaine::operator[](int a) const
+{
+    if (a>0 && a<capacite)
+    {
+        return tab[a];
+    }
+    else if (a>capacite)
+    {
+        throw std::bad_alloc();
+    }
+    else 
+    {
+        throw std::out_of_range("indice trop grand");
+    }
+    
+}

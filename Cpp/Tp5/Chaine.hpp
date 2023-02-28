@@ -24,7 +24,10 @@ class Chaine {
         int getCapacite() const;
         void afficher(std::ostream &) const;
         void afficher() const;
+        char operator[](int a) const;
+
         
 };
 std::ostream& operator<<( std::ostream & fr,const Chaine  x);
+
 #endif
