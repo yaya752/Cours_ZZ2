@@ -10,12 +10,7 @@ TEST_CASE("Constructeur par defaut") {
    CHECK(  p.empty() );
    CHECK(  0 == p.size() );
 }
-TEST_CASE("Constructeur par defaut") {
-   Pile p; // cela implique que par defaut la capacite de la pile n'est pas nulle => pas d exception
-   
-   CHECK(  p.empty() );
-   CHECK(  0 == p.size() );
-}
+
 
 // A faire quand on aura vu les exceptions
 TEST_CASE("Exceptions de mauvaise construction") {
