@@ -7,7 +7,7 @@ class Vecteur {
     public:
         int capacite;
         float* tab;
-        int cursor;
+        int cursor = 0;
     
     public:
         Vecteur(int capa =10);
@@ -18,6 +18,8 @@ class Vecteur {
         int capacity() const;
         int size() const;
         void push_back(float a);
+        float operator[](int a) const;
 
 };
+float Approx(float x);
 #endif

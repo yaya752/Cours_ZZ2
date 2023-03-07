@@ -29,16 +29,38 @@ void Vecteur::push_back(float a)
 {
     if (cursor==capacite)
     {
-        capacite*=2;
-        float *tab1 = new float[capacite];
-        memcpy(tab1,tab,capacite);
-        tab1[cursor] = a;
+
+        float *tab1 = new float[capacite*2];
+        memcpy(tab1,tab,sizeof(float) * capacite);
+        capacite= capacite *2;
         delete [] tab;
         tab = tab1;
+        tab[cursor] = a;
     }
     else 
     {
         tab[cursor]=a;
     }
     cursor++;
+}
+float Vecteur::operator[](int a) const
+{
+    // if (a>=0 && a<cursor)
+    // {
+        return tab[a];
+    // }
+    // else if (a>=cursor)
+    // {
+    //     throw std::bad_alloc();
+    // }
+    // else 
+    // {
+    //     throw std::out_of_range("indice trop grand");
+    // }
+}
+float Approx(float x)
+{
+    int i = (int) x;
+    x = (float) i;
+    return x;
 }

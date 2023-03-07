@@ -1,4 +1,4 @@
-SRC=Vecteur.cpp tests_catch.cpp main_test.cpp
+SRC=Chaine.cpp tests_catch.cpp main_test.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=cpp5
 

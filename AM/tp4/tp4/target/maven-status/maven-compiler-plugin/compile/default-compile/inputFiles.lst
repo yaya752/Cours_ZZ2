@@ -1,0 +1,9 @@
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/Tp2Application.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/model/Pixel.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/kafka/PixelConsumer.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/controller/PixelArtController.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/kafka/KafkaConsumerConfig.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/store/PixelStore.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/model/PixelBoard.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/kafka/PixelLine.java
+/home/yass/Desktop/Cours_ZZ2/AM/tp4/tp4/src/main/java/com/modernarchi/tp2/controller/AddPixelBody.java

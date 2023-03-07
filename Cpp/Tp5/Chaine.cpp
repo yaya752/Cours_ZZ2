@@ -67,7 +67,7 @@ char Chaine::operator[](int a) const
     {
         return tab[a];
     }
-    else if (a>capacite)
+    else if (a>=capacite)
     {
         throw std::bad_alloc();
     }
