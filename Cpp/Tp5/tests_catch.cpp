@@ -1,7 +1,9 @@
 #include "catch.hpp"
 #include <cstring>
 #include <sstream> // a mettre en commentaire 
-#include "Vecteur.hpp"
+//#include "Vecteur.hpp"
+#include "VecteurGen.hpp"
+typedef VecteurGen<float> Vecteur;
 TEST_CASE ("Vecteur1") {
   const Vecteur v;
  
