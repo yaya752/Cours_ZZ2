@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 template <typename T>
-class VecteurGen {
+class VecteurGen{
     private:
         int capacite;
         T* tab;
@@ -11,9 +11,10 @@ class VecteurGen {
     
     public:
         VecteurGen(int capa =10);
-        VecteurGen(const VecteurGen& c1);
+        //VecteurGen(const VecteurGen& c1);
         ~VecteurGen();
-        
+    template <typename U> 
+    friend VecteurGen<U> operator+(const VecteurGen<U> &, const VecteurGen<U>&) ;    
     public:
         int capacity() const;
         int size() const;
@@ -22,6 +23,7 @@ class VecteurGen {
     public:
     class OutOfRangeException{};
 };
+
 template <typename T>
 T Approx(T x);
 #include "VecteurGen.hxx"

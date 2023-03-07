@@ -10,7 +10,18 @@ TEST_CASE ("Vecteur1") {
   REQUIRE ( v.capacity() >= 10 );
   REQUIRE ( v.size()     == 0  );
 }
-
+TEST_CASE ("Vecteur somme") {
+  Vecteur v1(10);
+  Vecteur v2(10);
+  for (int i=0; i<4; ++i)
+      v1.push_back(i*1.0);
+  for (int i=0; i<6; ++i)
+      v2.push_back(i*1.0);
+  Vecteur v = v1 + v2;
+  REQUIRE ( v1.size()     == 4  );
+  REQUIRE ( v.capacity() == 20 );
+  REQUIRE ( v.size()     == 10  );
+}
 
 TEST_CASE ("Vecteur2" ) {
   Vecteur v(20);
