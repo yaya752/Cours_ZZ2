@@ -19,7 +19,8 @@ class Vecteur {
         int size() const;
         void push_back(float a);
         float operator[](int a) const;
-
+    public:
+    class OutOfRangeException{};
 };
 float Approx(float x);
 #endif

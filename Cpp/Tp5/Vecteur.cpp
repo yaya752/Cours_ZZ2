@@ -45,18 +45,18 @@ void Vecteur::push_back(float a)
 }
 float Vecteur::operator[](int a) const
 {
-    // if (a>=0 && a<cursor)
-    // {
+    if (a>=0 && a<cursor)
+    {
         return tab[a];
-    // }
-    // else if (a>=cursor)
-    // {
-    //     throw std::bad_alloc();
-    // }
-    // else 
-    // {
-    //     throw std::out_of_range("indice trop grand");
-    // }
+    }
+    else if (a>=cursor)
+    {
+         throw std::bad_alloc();
+    }
+    else 
+    {
+        throw Vecteur::OutOfRangeException();
+    }
 }
 float Approx(float x)
 {
